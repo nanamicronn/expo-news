@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { StyleSheet, View, FlatList, SafeAreaView } from 'react-native';
-import Text from "react-native-web/dist/exports/Text"
+import React from 'react';
+import { SafeAreaView, Text } from 'react-native';
 
 export default function ArticleScreen() {
   return (
