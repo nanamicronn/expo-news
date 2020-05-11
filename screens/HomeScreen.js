@@ -24,7 +24,6 @@ export default function HomeScreen (props) {
     try {
       const response = await axios.get(URL);
       setArticles(response.data.articles);
-      console.log(response);
     } catch (error) {
       console.error(error);
     }
@@ -39,7 +38,7 @@ export default function HomeScreen (props) {
             imageUrl={item.urlToImage}
             title={item.title}
             author={item.author}
-            onPress={() => navigation.navigate('Article')}
+            onPress={() => navigation.navigate('Article', {article: item})}
           />)}
         keyExtractor={(item, index) => index.toString()}
       />
