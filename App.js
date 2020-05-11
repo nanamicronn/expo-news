@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, FlatList, SafeAreaView } from 'react-native';
 import ListItem from './components/ListItem';
 import dummyArticles from './dummies/airticles.json';
+import Constants from 'expo-constants';
 
 const styles = StyleSheet.create({
   container: {
@@ -13,6 +14,7 @@ const styles = StyleSheet.create({
 export default function App() {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
+    alert(Constants.manifest.extra.newsApiKey);
     const timer = setTimeout(() => {
       setArticles(dummyArticles);
     }, 2000);
