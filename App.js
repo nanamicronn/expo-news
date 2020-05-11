@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function App() {
+export default App = () => {
   const [articles, setArticles] = useState([]);
   useEffect(() => {
     fetchAirticles();
